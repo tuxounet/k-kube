@@ -1,0 +1,28 @@
+host:
+  compute:
+    enabled: true
+    containers:
+      engine: docker
+      port:
+        start: 51000
+        end: 51999
+
+kube:
+  certificate_authority:
+    paths:
+      secrets: "{{ run_dir }}/etc/pki"
+    ca:
+      domain: my.kube
+      expiration: "+365d"
+      key:
+        seed: "a_random_seed"
+        type: RSA
+        size: 4096
+        cipher: auto
+      info:
+        organization: my.kube
+        common_name: "K-Kube Certificate Authority"
+        locality: Paris
+        country: FR
+        state: Ile-de-France
+        email: "admin@my.kube"

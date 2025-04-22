@@ -1,0 +1,14 @@
+k2:
+  metadata:
+    id: k2.components.kube.root
+    kind: inventory
+  body:
+    folders:
+      ignore: []
+      templates: []
+      applies:
+      - "k2.apply.yaml"
+        
+
+    vars:
+      title: k8s components based on k2 template

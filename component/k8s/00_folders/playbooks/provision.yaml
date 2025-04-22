@@ -1,0 +1,11 @@
+- name: prepare folders
+  file:
+    path: "{{ item }}"
+    state: directory
+    
+    recurse: yes
+  with_items:
+    - "{{ run_dir }}/home/.kube"
+    - "{{ run_dir }}/var/k3s"
+    
+    

@@ -1,0 +1,16 @@
+k2:
+  metadata:
+    id: k2.components.kube
+    kind: template-apply
+  body:
+    template:
+      source: git
+      params:
+        repository: https://github.com/tuxounet/k2-sdk.git
+        branch: 0.9
+        path: .templates/component/k2.template.yaml
+    vars:
+      name: kube
+      description: Un host Kubernetes
+      module: k-kube
+      sdk_module: "github.com/tuxounet/k2-sdk"
